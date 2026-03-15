@@ -78,7 +78,7 @@ temp-mail-extension/
 
 ## 后端服务
 
-需配合 [DriftMail API](https://github.com/eryveban/drift-mail) 使用。
+需配合 [DriftMail](https://github.com/eryveban/drift-mail) 使用。
 
 ## 作者
 
