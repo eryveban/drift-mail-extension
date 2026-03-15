@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设置 - DriftMail</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="back-btn" id="back-btn">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/>
+        </svg>
+      </button>
+      <h1>设置</h1>
+    </div>
+    
+    <div class="content">
+      <div class="section">
+        <h2>API 配置</h2>
+        <p class="hint">配置您的 DriftMail 服务地址</p>
+        
+        <div class="form-group">
+          <label for="api-url">API 地址</label>
+          <input type="url" id="api-url" placeholder="https://your-domain.workers.dev">
+          <span class="help">服务部署地址，不含末尾斜杠</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="access-key">Access Key</label>
+          <input type="text" id="access-key" placeholder="输入您的 Access Key">
+          <span class="help">用于 API 认证的密钥</span>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>其他设置</h2>
+        
+        <div class="form-group">
+          <label for="expire-minutes">默认过期时间（分钟）</label>
+          <input type="number" id="expire-minutes" value="30" min="5" max="1440">
+        </div>
+        
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="show-floating-btn" checked>
+            <span>显示悬浮按钮</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <button id="save-btn" class="primary-btn">保存设置</button>
+        <button id="reset-btn" class="secondary-btn">重置</button>
+      </div>
+      
+      <div id="status" class="status"></div>
+    </div>
+  </div>
+  
+  <script src="settings.js" type="module"></script>
+</body>
+</html>
